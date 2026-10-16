@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Payment received</title>
+    </head>
+    <body style="font-family:sans-serif;text-align:center;padding:48px">
+        <h2>Payment received</h2>
+        <p>Returning you to Eventra…</p>
+        <a id="open" href="#">Tap here if the app doesn't open</a>
+        <script>
+            var link = "eventraapp://payment/callback" + window.location.search;
+            document.getElementById("open").href = link;
+            window.location.replace(link);
+        </script>
+    </body>
+</html>
